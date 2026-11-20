@@ -64,12 +64,14 @@ main{max-width:72rem;margin:0 auto;padding:0 1.25rem}
 .side h3{font-family:var(--disp);font-weight:400;font-size:1.5rem;margin:0 0 .75rem;display:flex;align-items:baseline;gap:.75rem}
 .side h3 small{font-family:var(--body);font-size:.95rem;font-style:italic}
 .side ol{list-style:none;margin:0;padding:0}
-.side li a{display:grid;grid-template-columns:2.6rem 1fr auto;column-gap:.6rem;text-decoration:none;padding:.42rem 0;border-bottom:1px dotted var(--soft);line-height:1.3}
+.side li a{display:grid;grid-template-columns:2.75rem 2.6rem 1fr auto;column-gap:.6rem;text-decoration:none;padding:.42rem 0;border-bottom:1px dotted var(--soft);line-height:1.3}
 .side li a:hover .ar,.side li a:focus-visible .ar{background:var(--hi)}
-.side .r{font-family:var(--disp);font-size:1rem;grid-row:span 2;padding-top:.1rem}
+.side .th{grid-row:span 2;width:2.75rem;height:2.75rem;object-fit:cover;background:var(--paper2);border:2px solid var(--ink);filter:grayscale(1) contrast(1.15)}
+.side li a:hover .th{filter:none}
+.side .r{font-family:var(--disp);font-size:1rem;grid-row:span 2;padding-top:.1rem;padding-left:.5rem}
 .side .ar{font-weight:700}
-.side .al{font-style:italic;grid-column:2}
-.side .y{grid-column:3;grid-row:1;color:var(--soft);font-size:.9rem}
+.side .al{font-style:italic;grid-column:3}
+.side .y{grid-column:4;grid-row:1;color:var(--soft);font-size:.9rem}
 .nores{font-style:italic}
 .methode{padding:2.5rem 0 3rem;border-top:3px solid var(--ink);max-width:44rem}
 
@@ -125,3 +127,13 @@ main{max-width:72rem;margin:0 auto;padding:0 1.25rem}
   .filter input{min-width:0;width:100%}.filter{width:100%}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* Pochettes */
+.jcard.has-cover .jcard-front{padding:0}
+.jcard.has-cover .jcard-n,.jcard.has-cover .jcard-a,.jcard.has-cover .jcard-t,.jcard.has-cover .jcard-y{display:none}
+.jcard-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.15) contrast(1.05)}
+.jcard-sticker{position:absolute;left:.75rem;bottom:.75rem;z-index:2;background:var(--hi);border:3px solid var(--ink);font-family:var(--disp);
+  font-size:1.6rem;line-height:1;min-width:3.4rem;height:3.4rem;border-radius:50%;display:flex;align-items:center;justify-content:center;transform:rotate(-8deg)}
+.jcard.has-cover .jcard-tape{z-index:2}
+.jcard.has-cover{aspect-ratio:auto}
+.jcard.has-cover .jcard-front{aspect-ratio:1}
