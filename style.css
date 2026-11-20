@@ -137,3 +137,4 @@ main{max-width:72rem;margin:0 auto;padding:0 1.25rem}
 .jcard.has-cover .jcard-tape{z-index:2}
 .jcard.has-cover{aspect-ratio:auto}
 .jcard.has-cover .jcard-front{aspect-ratio:1}
+.pager em{display:block;font-family:var(--body);font-size:.9rem;color:var(--soft);margin-top:.15rem}
